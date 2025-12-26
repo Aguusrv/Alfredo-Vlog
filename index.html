@@ -5,27 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Alfredo Morales – Portal Personal</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-family: 'Source Sans Pro', sans-serif;
     }
 
     :root {
-      --primary: #0f172a;
-      --secondary: #1e293b;
-      --accent: #3b82f6;
-      --light: #f8fafc;
-      --gray: #94a3b8;
-      --border: #e2e8f0;
+      --primary: #2c1e18;
+      --secondary: #4a3a30;
+      --accent: #8b6f4e;
+      --light: #f9f5f0;
+      --cream: #fdf9f3;
+      --beige: #e8e0d5;
+      --text: #3a2a20;
+      --border: #d4c9b8;
     }
 
     body {
-      background-color: var(--light);
-      color: var(--primary);
-      line-height: 1.6;
+      background-color: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
     }
 
     .container {
@@ -36,11 +39,12 @@
 
     /* Header */
     header {
-      background: white;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      background: var(--light);
+      box-shadow: 0 2px 15px rgba(0,0,0,0.08);
       position: sticky;
       top: 0;
       z-index: 100;
+      border-bottom: 1px solid var(--beige);
     }
 
     .header-content {
@@ -51,9 +55,10 @@
     }
 
     .logo h1 {
-      font-size: 1.5rem;
-      font-weight: 700;
+      font-size: 1.6rem;
+      font-weight: 600;
       color: var(--primary);
+      font-family: 'Playfair Display', serif;
     }
 
     nav ul {
@@ -64,9 +69,10 @@
 
     nav a {
       text-decoration: none;
-      color: var(--primary);
+      color: var(--secondary);
       font-weight: 500;
       transition: color 0.2s;
+      font-size: 0.95rem;
     }
 
     nav a:hover {
@@ -80,77 +86,89 @@
     }
 
     .hero h2 {
-      font-size: 2.5rem;
-      font-weight: 800;
+      font-size: 2.8rem;
+      font-weight: 700;
       margin-bottom: 1rem;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: var(--primary);
+      font-family: 'Playfair Display', serif;
+      letter-spacing: -0.5px;
     }
 
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       color: var(--secondary);
-      max-width: 600px;
+      max-width: 650px;
       margin: 0 auto 2rem;
+      font-style: italic;
     }
 
     /* About */
     .about {
       padding: 3rem 0;
-      background: white;
-      border-radius: 16px;
-      margin: 2rem 0;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      background: var(--light);
+      border-radius: 18px;
+      margin: 2.5rem 0;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.04);
+      border: 1px solid var(--beige);
     }
 
     .about h3 {
-      font-size: 1.8rem;
-      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      margin-bottom: 1.8rem;
       color: var(--primary);
+      font-family: 'Playfair Display', serif;
+      text-align: center;
     }
 
     .about-content {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 2rem;
-      align-items: start;
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
     .profile-img {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      background: var(--border);
+      flex: 0 0 220px;
       display: flex;
-      align-items: center;
       justify-content: center;
-      font-size: 3rem;
-      color: var(--gray);
+      align-items: flex-start;
+    }
+
+    .profile-img img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--beige);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
     .about-text p {
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
       text-align: justify;
+      line-height: 1.8;
+      font-size: 1.05rem;
     }
 
     .social-links {
       display: flex;
-      gap: 1rem;
-      margin-top: 1rem;
+      gap: 1.2rem;
+      margin-top: 1.5rem;
+      justify-content: center;
     }
 
     .social-links a {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 40px;
-      height: 40px;
+      width: 45px;
+      height: 45px;
       border-radius: 50%;
       background: var(--light);
       color: var(--primary);
       text-decoration: none;
-      transition: all 0.2s;
+      transition: all 0.3s;
       border: 2px solid var(--border);
     }
 
@@ -158,6 +176,7 @@
       background: var(--accent);
       color: white;
       border-color: var(--accent);
+      transform: translateY(-2px);
     }
 
     /* Publications */
@@ -166,84 +185,103 @@
     }
 
     .publications h3 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
+      font-size: 2.2rem;
+      margin-bottom: 2.5rem;
       text-align: center;
       color: var(--primary);
+      font-family: 'Playfair Display', serif;
     }
 
     .books-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
+      gap: 2.2rem;
       margin-top: 2rem;
     }
 
     .book-card {
-      background: white;
-      border-radius: 12px;
+      background: var(--light);
+      border-radius: 14px;
       overflow: hidden;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+      transition: transform 0.3s, box-shadow 0.3s;
       text-align: center;
+      border: 1px solid var(--beige);
     }
 
     .book-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    }
+
+    .book-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 8px 8px 0 0;
     }
 
     .book-info {
-      padding: 1.5rem;
+      padding: 1.6rem;
     }
 
     .book-info h4 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+      margin-bottom: 0.8rem;
       color: var(--primary);
+      font-family: 'Playfair Display', serif;
     }
 
     .book-info p {
-      font-size: 0.95rem;
+      font-size: 0.98rem;
       color: var(--secondary);
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
       text-align: justify;
+      line-height: 1.7;
     }
 
     .book-link {
       display: inline-block;
-      padding: 0.5rem 1rem;
+      padding: 0.6rem 1.2rem;
       background: var(--accent);
       color: white;
       text-decoration: none;
-      border-radius: 6px;
-      font-weight: 500;
-      transition: background 0.2s;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.2s;
+      font-size: 0.95rem;
     }
 
     .book-link:hover {
-      background: #2563eb;
+      background: #7a5f42;
+      transform: translateY(-2px);
     }
 
     /* Blog */
     .blog {
       padding: 4rem 0 2rem;
-      background: white;
-      border-radius: 16px;
-      margin: 2rem 0;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      background: var(--light);
+      border-radius: 18px;
+      margin: 2.5rem 0;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.04);
+      border: 1px solid var(--beige);
     }
 
     .blog h3 {
-      font-size: 1.8rem;
-      margin-bottom: 2rem;
+      font-size: 1.9rem;
+      margin-bottom: 2.2rem;
       padding: 0 1rem;
+      color: var(--primary);
+      font-family: 'Playfair Display', serif;
+      text-align: center;
     }
 
     .blog-posts {
       display: grid;
-      gap: 2rem;
+      gap: 2.2rem;
       padding: 0 1rem;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
     .blog-post {
@@ -257,79 +295,67 @@
     }
 
     .post-date {
-      color: var(--gray);
-      font-size: 0.9rem;
-      margin-bottom: 0.5rem;
+      color: var(--accent);
+      font-size: 0.95rem;
+      margin-bottom: 0.6rem;
+      font-weight: 600;
     }
 
     .post-title {
-      font-size: 1.3rem;
+      font-size: 1.35rem;
       margin-bottom: 1rem;
       color: var(--primary);
       font-weight: 600;
+      font-family: 'Playfair Display', serif;
     }
 
     .post-excerpt {
       color: var(--secondary);
-      line-height: 1.7;
+      line-height: 1.75;
+      font-size: 1.02rem;
     }
 
     /* Footer */
     footer {
       text-align: center;
-      padding: 3rem 0;
-      color: var(--gray);
-      font-size: 0.9rem;
+      padding: 3rem 0 2rem;
+      color: var(--secondary);
+      font-size: 0.95rem;
+      border-top: 1px solid var(--beige);
+      margin-top: 3rem;
     }
 
     /* Responsive */
     @media (max-width: 768px) {
       .header-content {
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.2rem;
       }
       
       nav ul {
-        gap: 1rem;
+        gap: 1.2rem;
         flex-wrap: wrap;
         justify-content: center;
       }
       
       .about-content {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         text-align: center;
+        gap: 2rem;
       }
       
       .hero h2 {
-        font-size: 2rem;
+        font-size: 2.1rem;
       }
       
       .hero p {
-        font-size: 1rem;
+        font-size: 1.05rem;
       }
       
+      .book-card img {
+        height: 280px;
+      }
     }
-    .about-content {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-}
-
-.profile-img img {
-  width: 240px;
-  height: 240px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-
-.profile-img img {
-  width: 180px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  
-}
   </style>
 </head>
 <body>
@@ -355,7 +381,7 @@
   <main class="container">
   <section class="hero">
     <h2>Escritor</h2>
-    <p>Escritor y docente.</p>
+    <p>Gestor cultural y compilador  de historias orales</p>
   </section>
 
   <section id="about" class="about">
@@ -374,7 +400,7 @@
 }
 
 .profile-img {
-  flex: 0 0 220px;        /* ancho fijo */
+  flex: 0 0 220px;        
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -393,16 +419,17 @@
 
         <div class="about-text">
           <p>
-            Hola, soy Alfredo Morales Nieves, escritor. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.
+            Soy Alfredo Morales Nieves, escritor y ensayista nacido en San Juan y criado en Mayagüez, 
+            ciudad que marcó mi vida, mi memoria y mi obra. Mi escritura nace del cruce entre la experiencia personal
+            , la historia y las ciudades que habito y recuerdo, con Mayagüez como núcleo emocional y literario. 
+            Doctor en Estudios Hispánicos, he dedicado mi trabajo al ensayo, la poesía y la narrativa, con una 
+            mirada puesta en la identidad, el desarraigo y la memoria. He viajado y enseñado en múltiples países,
+             escribiendo muchas veces desde la distancia, pero siempre regresando, a través de la palabra, a las 
+             calles que me formaron.
           </p>
 
           <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-            deserunt mollit anim id est laborum.
+            
           </p>
 
           <div class="social-links">
