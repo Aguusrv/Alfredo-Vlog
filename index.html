@@ -107,7 +107,7 @@
       padding: 3rem 0;
       background: var(--light);
       border-radius: 18px;
-      margin: 2.5rem 0;
+      margin: .5rem 0;
       box-shadow: 0 6px 12px rgba(0,0,0,0.04);
       border: 1px solid var(--beige);
     }
@@ -129,18 +129,18 @@
     }
 
     .profile-img {
-      flex: 0 0 220px;
+      flex: 0 0 0px;
       display: flex;
       justify-content: center;
       align-items: flex-start;
     }
 
     .profile-img img {
-      width: 180px;
-      height: 180px;
+      width: 360px;
+      height: 360px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid var(--beige);
+      border: 4px solid var(--beige);
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
@@ -315,6 +315,27 @@
       font-size: 1.02rem;
     }
 
+    /* Ver más button */
+    .view-more-btn {
+      display: block;
+      text-align: center;
+      margin: 2.5rem auto 0;
+      padding: 0.8rem 2rem;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      max-width: 250px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .view-more-btn:hover {
+      background: #7a5f42;
+      transform: translateY(-2px);
+    }
+
     /* Footer */
     footer {
       text-align: center;
@@ -355,6 +376,12 @@
       .book-card img {
         height: 280px;
       }
+      
+      .view-more-btn {
+        margin-top: 2rem;
+        padding: 0.7rem 1.5rem;
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -363,7 +390,6 @@
     <div class="container">
       <div class="header-content">
         <div class="logo">
-            
           <h1>Alfredo Morales</h1>
         </div>
         <nav>
@@ -381,7 +407,7 @@
   <main class="container">
   <section class="hero">
     <h2>Escritor</h2>
-    <p>Gestor cultural y compilador  de historias orales</p>
+    <p>Gestor cultural y compilador de historias orales</p>
   </section>
 
   <section id="about" class="about">
@@ -389,31 +415,10 @@
       <h3>Sobre mí</h3>
 
       <div class="about-content">
-
         <div class="profile-img">
           <img 
             src="perfil.jpg"
-            .about-content {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-}
-
-.profile-img {
-  flex: 0 0 220px;        
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.profile-img img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-}
             alt="Foto de perfil Alfredo Morales"
-            
           >
         </div>
 
@@ -428,10 +433,6 @@
              calles que me formaron.
           </p>
 
-          <p>
-            
-          </p>
-
           <div class="social-links">
             <a href="#"><i class="fab fa-linkedin-in"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -439,124 +440,108 @@
             <a href="#"><i class="fas fa-envelope"></i></a>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-    <section id="publications" class="publications">
-      <h3>Publicaciones</h3>
-      <div class="books-grid">
-        <!-- PUBLICACIÓN: EL MUERTO -->
-        <div class="book-card">
-          <img 
-            src="elmuerto.jpg"
-            alt="Portada del libro El Muerto"
-            style="
-              width: 100%;
-              height: 400px;
-              object-fit: cover;
-              border-radius: 8px;
-              margin-bottom: 12px;
-            "
-          >
-          <div class="book-info">
-            <h4>El Muerto</h4>
-            <p>
-              Luis es un joven que a sus veintitantos años es asesinado sin saber razón aparente,
-              mucho menos, autor. Esto lo lleva a moverse por el mundo de los muertos y los vivos
-              en busca de los causantes de su desdicha, no solamente porque se niega a ser olvidado,
-              sino porque quiere justicia.
-            </p>
-            <a href="https://www.amazon.com/Muerto-Spanish-Alfredo-Morales-2014-01-29/dp/B019NS14LS"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="book-link">
-              Ver más
-            </a>
-          </div>
-        </div>
-
-        <!-- PUBLICACIÓN: LIBROS -->
-        <div class="book-card">
-          <img 
-            src="julia.jpg"
-            alt="Portada del libro Julia"
-            style="
-              width: 100%;
-              height: 400px;
-              object-fit: cover;
-              border-radius: 8px;
-              margin-bottom: 12px;
-            "
-          >
-          <div class="book-info">
-            <h4>Julia: Tales of a Puerto Rican Immigrant</h4>
-            <p>
-              I grew up listening my grandmother´s stories. She visited us whenever she could. My grandmother was born in Las Marías,
-               Puerto Rico, and like thousands of other Puerto Rican farmers, she emigrated to the great city of New York
-                at the end of the 1940s. The Second World War had just ended.
-            </p>
-            <a href="https://www.amazon.com/Julia-Tales-Puerto-Rican-Immigrant/dp/B0D3HV34FJ"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="book-link">
-              Ver más
-            </a>
-          </div>
-        </div>
-
-        <!-- PUBLICACIÓN: FRAGMENTOS DEL SILENCIO -->
-        <div class="book-card">
-          <img 
-            src="Poemas.jpg"
-            alt="Portada del libro Poemas"
-            style="
-              width: 100%;
-              height: 400px;
-              object-fit: cover;
-              border-radius: 8px;
-              margin-bottom: 12px;
-            "
-          >
-          <div class="book-info">
-            <h4>Desde las puertas de mi casa</h4>
-            <p>
-               Poemas a mi Mayagüez de infancia. Una colección lírica que explora la nostalgia y el profundo afecto del autor hacia su 
-              ciudad natal, Mayagüez, Puerto Rico. A través de sus versos.
-            </p>
-            <a href="https://www.amazon.com/-/es/Desde-las-puertas-casa-Mayaguezano/dp/1530776252"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="book-link">
-              Ver más
-            </a>
-          </div>
-        </div>
-    </section>
-
-    <section id="blog" class="blog">
-      <div class="container">
-        <h3>Últimos escritos</h3>
-        <div class="blog-posts">
-          <div class="blog-post">
-            <div class="post-date">25 de diciembre, 2025</div>
-            <h4 class="post-title">Lorem ipsum dolor sit amet</h4>
-            <p class="post-excerpt">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-          </div>
-          <div class="blog-post">
-            <div class="post-date">18 de diciembre, 2025</div>
-            <h4 class="post-title">Composición como escritura extendida</h4>
-            <p class="post-excerpt">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-          </div>
-          <div class="blog-post">
-            <div class="post-date">10 de diciembre, 2025</div>
-            <h4 class="post-title">Interferencias creativas</h4>
-            <p class="post-excerpt">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-          </div>
+  <section id="publications" class="publications">
+    <h3>Publicaciones</h3>
+    <div class="books-grid">
+      <!-- PUBLICACIÓN: EL MUERTO -->
+      <div class="book-card">
+        <img 
+          src="elmuerto.jpg"
+          alt="Portada del libro El Muerto"
+        >
+        <div class="book-info">
+          <h4>El Muerto</h4>
+          <p>
+            Luis es un joven que a sus veintitantos años es asesinado sin saber razón aparente,
+            mucho menos, autor. Esto lo lleva a moverse por el mundo de los muertos y los vivos
+            en busca de los causantes de su desdicha, no solamente porque se niega a ser olvidado,
+            sino porque quiere justicia.
+          </p>
+          <a href="https://www.amazon.com/Muerto-Spanish-Alfredo-Morales-2014-01-29/dp/B019NS14LS"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="book-link">
+            Ver más
+          </a>
         </div>
       </div>
-    </section>
+
+      <!-- PUBLICACIÓN: LIBROS -->
+      <div class="book-card">
+        <img 
+          src="julia.jpg"
+          alt="Portada del libro Julia"
+        >
+        <div class="book-info">
+          <h4>Julia: Tales of a Puerto Rican Immigrant</h4>
+          <p>
+            I grew up listening my grandmother´s stories. She visited us whenever she could. My grandmother was born in Las Marías,
+             Puerto Rico, and like thousands of other Puerto Rican farmers, she emigrated to the great city of New York
+              at the end of the 1940s. The Second World War had just ended.
+          </p>
+          <a href="https://www.amazon.com/Julia-Tales-Puerto-Rican-Immigrant/dp/B0D3HV34FJ"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="book-link">
+            Ver más
+          </a>
+        </div>
+      </div>
+
+      <!-- PUBLICACIÓN: FRAGMENTOS DEL SILENCIO -->
+      <div class="book-card">
+        <img 
+          src="Poemas.jpg"
+          alt="Portada del libro Poemas"
+        >
+        <div class="book-info">
+          <h4>Desde las puertas de mi casa</h4>
+          <p>
+             Poemas a mi Mayagüez de infancia. Una colección lírica que explora la nostalgia y el profundo afecto del autor hacia su 
+            ciudad natal, Mayagüez, Puerto Rico. A través de sus versos.
+          </p>
+          <a href="https://www.amazon.com/-/es/Desde-las-puertas-casa-Mayaguezano/dp/1530776252"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="book-link">
+            Ver más
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog" class="blog">
+    <div class="container">
+      <h3>Últimos escritos</h3>
+      <div class="blog-posts">
+        <div class="blog-post">
+          <div class="post-date">25 de diciembre, 2025</div>
+          <h4 class="post-title">Lorem ipsum dolor sit amet</h4>
+          <p class="post-excerpt">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+        <div class="blog-post">
+          <div class="post-date">18 de diciembre, 2025</div>
+          <h4 class="post-title">Composición como escritura extendida</h4>
+          <p class="post-excerpt">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+        <div class="blog-post">
+          <div class="post-date">10 de diciembre, 2025</div>
+          <h4 class="post-title">Interferencias creativas</h4>
+          <p class="post-excerpt">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+      </div>
+      
+      <!-- Ver más button -->
+      <a href="indexescritos.html" class="view-more-btn">
+        Ver más escritos
+      </a>
+    </div>
+  </section>
   </main>
 
   <footer>
